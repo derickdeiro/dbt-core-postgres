@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: dbt_postgres
+    database: postgres
+    schema: public
+    tables: 
+      - name: customers_dbt_tests
+      - name: orders_dbt_tests
+
