@@ -24,7 +24,7 @@ models:
     - name: customer_id
       data_tests:
         - not_null
-        - relacionships:
+        - relationships:
             to: ref('stg_customers_dbt_tests')
             field: customer_id
     - name: status

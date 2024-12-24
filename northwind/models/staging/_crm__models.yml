@@ -40,7 +40,7 @@ models:
   - name: stg_customers  # Nome do modelo
     description: "View de clientes em stg"  # Descrição do modelo
     meta:  # Metadados adicionais
-      owner: Luciano Vasconcelos  # Proprietário do modelo
+      owner: Derick Deiró  # Proprietário do modelo
       type: view  # Tipo do modelo (tabela ou view)
       data_source: crm  # Pacote ao qual o modelo pertence
       tabelas_criticas: sim  # Pacote ao qual o modelo pertence
