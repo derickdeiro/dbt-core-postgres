@@ -3,7 +3,7 @@ with sources as (
 ),
 
 
-with renamed_and_cleaning as (
+renamed_and_cleaning as (
     SELECT 
         order_id,
         customer_id,

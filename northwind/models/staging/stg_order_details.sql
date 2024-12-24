@@ -2,7 +2,7 @@ with sources as (
     SELECT * FROM {{ ref('raw_order_details') }}
 ),
 
-with renamed_and_cleaning as (
+renamed_and_cleaning as (
     SELECT 
         order_id,
         product_id,
