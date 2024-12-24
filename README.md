@@ -43,29 +43,53 @@ O projeto utiliza o banco de dados Northwind (baseado no projeto original do SQL
    git clone https://github.com/derickdeiro/dbt-core-postgres.git
    cd dbt-core-postgres
    ```
-2. Crie um arquivo `.env` para preencher as seguintes variáveis de ambiente:
+
+2. Crie um ambiente virtual `.venv` e o ative:
+   ```bash
+   python3.12 -m venv .venv
+   ```
+- Windows:
+   ```bash
+   .venv\Scripts\Activate
+   ```
+- Linux:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+3. Instale o dbt-core para postgres:
+   ```bash
+   pip install dbt-postgres==1.9.0
+   ```
+
+4. Crie um arquivo `.env` para preencher as seguintes variáveis de ambiente:
     ```
     POSTGRES_PASSWORD=DIGITE_SUA_SENHA_POSTGRES
     PGADMIN_DEFAULT_EMAIL=DIGITE_SEU_EMAIL_PARA_ACESSAR_O_PGADMIN
     PGADMIN_DEFAULT_PASSWORD=DIGITE_SUA_SENHA_PARA_PGADMIN
     ```
 
-3. Suba os serviços com Docker Compose:
+5. Suba os serviços com Docker Compose:
    ```bash
    docker-compose up -d
    ```
 
-4. Execute os testes:
+6. Acesse a pasta do projeto Northwind:
+   ```bash
+   cd northwind
+   ```
+
+7. Execute os testes:
    ```bash
    dbt test
    ```
 
-5. Execute as transformações DBT:
+8. Execute as transformações DBT:
    ```bash
    dbt run
    ```
 
-6. Visualize a documentação:
+9. Visualize a documentação:
    ```bash
    dbt docs generate
    dbt docs serve
